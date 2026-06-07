@@ -1,0 +1,324 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   GOOGLE FONTS
+───────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400&display=swap');
+
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  /* Brand */
+  --color-primary:        #839678;
+  --color-primary-dark:   #6b7d63;
+  --color-primary-light:  #a3b396;
+  --color-primary-bg:     #f0f3ee;
+
+  /* Neutrals */
+  --color-background:     #ffffff;
+  --color-surface:        #F6F6F6;
+  --color-border:         #e8e8e8;
+
+  /* Text */
+  --color-text-dark:      #1c1c1c;
+  --color-text-mid:       #4a4a4a;
+  --color-text-muted:     #8a8a8a;
+  --color-text-on-primary:#ffffff;
+
+  /* Accent warm (inspired by original secondary #ffe2c7) */
+  --color-accent:         #f5e6d3;
+  --color-accent-dark:    #e8c9a0;
+
+  /* Typography */
+  --font-body:   'Poppins', sans-serif;
+  --font-heading:'Source Serif 4', serif;
+
+  /* Radius */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg:   0 10px 30px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ─────────────────────────────────────────
+   TAILWIND v4 THEME EXTENSION
+───────────────────────────────────────── */
+@theme inline {
+  /* Colors */
+  --color-primary:        var(--color-primary);
+  --color-primary-dark:   var(--color-primary-dark);
+  --color-primary-light:  var(--color-primary-light);
+  --color-primary-bg:     var(--color-primary-bg);
+  --color-surface:        var(--color-surface);
+  --color-border:         var(--color-border);
+  --color-accent:         var(--color-accent);
+  --color-accent-dark:    var(--color-accent-dark);
+  --color-text-dark:      var(--color-text-dark);
+  --color-text-mid:       var(--color-text-mid);
+  --color-text-muted:     var(--color-text-muted);
+
+  /* Fonts */
+  --font-body:            var(--font-body);
+  --font-heading:         var(--font-heading);
+
+  /* Border radius */
+  --radius-sm:            var(--radius-sm);
+  --radius-md:            var(--radius-md);
+  --radius-lg:            var(--radius-lg);
+  --radius-xl:            var(--radius-xl);
+}
+
+/* ─────────────────────────────────────────
+   BASE STYLES
+───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-text-dark);
+}
+
+h1 { font-size: clamp(2.75rem, 6vw, 5rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+
+p {
+  color: var(--color-text-mid);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─────────────────────────────────────────
+   REUSABLE UTILITY CLASSES
+───────────────────────────────────────── */
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  transform: translateY(-1px);
+}
+
+/* Cards */
+.card {
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* Section spacing */
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+/* Container */
+.container-site {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section title decoration */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-bg);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+/* Stat card */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  gap: 0.5rem;
+}
+.stat-card .stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Input / Textarea base */
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  background: var(--color-background);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(131, 150, 120, 0.15);
+}
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Accordion */
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+.accordion-trigger:hover {
+  color: var(--color-primary);
+}
+.accordion-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--color-primary);
+}
+.accordion-trigger[data-open="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+}
+.accordion-content.open {
+  max-height: 500px;
+  opacity: 1;
+}
+.accordion-content-inner {
+  padding: 0 0 1.25rem 0;
+  color: var(--color-text-mid);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Tag / Badge */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+}

@@ -5,7 +5,6 @@ import GallerySection       from "@/components/sections/GallerySection";
 import AnnouncementsSection from "@/components/sections/AnnouncementsSection";
 import ContactSection       from "@/components/sections/ContactSection";
 import FaqSection           from "@/components/sections/FaqSection";
-import DonationSection      from "@/components/sections/DonationSection";
 import { getSiteContent, getFaq } from "@/lib/supabase/queries";
 
 export default async function Home() {
@@ -21,7 +20,6 @@ export default async function Home() {
       <AnnouncementsSection />
       <ContactSection content={content} />
       <FaqSection     faq={faq} />
-      <DonationSection content={content} />
     </>
   );
 }

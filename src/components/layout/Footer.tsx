@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Heart, MessageCircle, Mail } from "lucide-react";
 
 const LINKS_NAV = [
@@ -80,13 +79,6 @@ export default function Footer() {
               contact@nasselkheir.fr
             </a>
           </div>
-          <Link
-            href="/faire-un-don"
-            className="mt-2 btn-outline text-sm justify-center border-[#839678] text-[#a3b396] hover:bg-[#839678] hover:text-white w-full text-center"
-          >
-            <Heart size={14} />
-            Faire un don
-          </Link>
         </div>
       </div>
 

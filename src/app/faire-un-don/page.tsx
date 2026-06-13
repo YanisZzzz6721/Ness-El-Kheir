@@ -46,14 +46,18 @@ export default function FaireUnDonPage() {
 
       {/* ── Contenu ── */}
       <div className="bg-[#F6F6F6]">
-        <div className="container-site py-10 flex flex-col gap-8">
-
-          {/* Retour */}
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#8a8a8a] hover:text-[#839678] transition-colors w-fit">
-            <ArrowLeft size={15} />
+        {/* Bouton retour flottant, séparé du hero */}
+        <div className="container-site pt-8 pb-2">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white bg-[#839678] hover:bg-[#6b7d63] px-4 py-2 rounded-full transition-colors shadow-sm"
+          >
+            <ArrowLeft size={14} />
             Retour à l&apos;accueil
           </Link>
+        </div>
 
+        <div className="container-site py-8 pb-16 flex flex-col gap-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
             {/* ── Gauche : impact ── */}
@@ -137,6 +141,7 @@ export default function FaireUnDonPage() {
           </div>
         </div>
       </div>
+
     </>
   );
 }

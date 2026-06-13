@@ -25,22 +25,24 @@ const BASE_URL = "https://ness-el-kheir.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Ness el Kheir — Association humanitaire en Île-de-France",
+    default: "Ness el Kheir — Association humanitaire à Strasbourg",
     template: "%s | Ness el Kheir",
   },
   description:
-    "Ness el Kheir est une association féminine humanitaire en Île-de-France. Collectes alimentaires, maraudes, distributions de vêtements, aide aux étudiants et aux familles en difficulté.",
+    "Ness el Kheir est une association féminine humanitaire à Strasbourg (67). Aide aux personnes âgées, soutien aux étudiants, collectes alimentaires, distribution de vêtements, aide aux familles en difficulté et actions solidaires en Alsace.",
   keywords: [
     "Ness el Kheir",
-    "association humanitaire",
-    "association féminine",
-    "maraudes Île-de-France",
-    "collecte alimentaire",
-    "bénévoles",
-    "aide précarité",
-    "don association",
-    "distribution vêtements",
-    "Paris humanitaire",
+    "association humanitaire Strasbourg",
+    "association féminine Strasbourg",
+    "aide personnes âgées Strasbourg",
+    "soutien étudiants Strasbourg",
+    "collecte alimentaire 67",
+    "bénévoles Strasbourg",
+    "aide précarité Alsace",
+    "don association Strasbourg",
+    "distribution vêtements Strasbourg",
+    "action solidaire Bas-Rhin",
+    "association 67",
   ],
   authors: [{ name: "Ness el Kheir" }],
   creator: "Ness el Kheir",
@@ -66,9 +68,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: BASE_URL,
     siteName: "Ness el Kheir",
-    title: "Ness el Kheir — Association humanitaire en Île-de-France",
+    title: "Ness el Kheir — Association humanitaire à Strasbourg",
     description:
-      "Association féminine engagée dans des actions humanitaires : maraudes, collectes alimentaires, distributions de vêtements et soutien aux familles en difficulté.",
+      "Association féminine à Strasbourg : aide aux personnes âgées, soutien aux étudiants, collectes alimentaires, distributions de vêtements et aide aux familles en difficulté.",
     images: [
       {
         url: "/logo.png",
@@ -80,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Ness el Kheir — Association humanitaire",
-    description: "Association féminine en Île-de-France : maraudes, collectes, distributions.",
+    title: "Ness el Kheir — Association humanitaire Strasbourg",
+    description: "Association féminine à Strasbourg : aide aux personnes âgées, étudiants, collectes, distributions.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -97,10 +99,17 @@ const jsonLd = {
   url: BASE_URL,
   logo: `${BASE_URL}/logo.png`,
   description:
-    "Association féminine humanitaire en Île-de-France : collectes alimentaires, maraudes, distributions de vêtements, aide aux étudiants.",
+    "Association féminine humanitaire à Strasbourg : aide aux personnes âgées, soutien aux étudiants, collectes alimentaires, distributions de vêtements, aide aux familles en difficulté.",
   areaServed: {
     "@type": "Place",
-    name: "Île-de-France",
+    name: "Strasbourg, Bas-Rhin, Alsace",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Strasbourg",
+    postalCode: "67000",
+    addressRegion: "Alsace",
+    addressCountry: "FR",
   },
   foundingDate: "2023",
   nonprofitStatus: "NonprofitType",

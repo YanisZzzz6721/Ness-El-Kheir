@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "placehold.co" },
-      // Supabase Storage sera ajouté à l'Étape 5
+      { protocol: "https", hostname: "yqyrsxqwvtavdrlcozas.supabase.co" },
     ],
   },
 };

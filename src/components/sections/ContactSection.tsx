@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Send, CheckCircle2, Instagram, Phone } from "lucide-react";
+import { submitContact } from "@/app/actions/contact";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -17,10 +18,13 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    // TODO Étape 6 : Server Action Supabase
-    await new Promise((r) => setTimeout(r, 1000));
-    setStatus("success");
-    setForm({ nom: "", telephone: "", message: "" });
+    const result = await submitContact(form);
+    if (result.success) {
+      setStatus("success");
+      setForm({ nom: "", telephone: "", message: "" });
+    } else {
+      setStatus("error");
+    }
   };
 
   return (

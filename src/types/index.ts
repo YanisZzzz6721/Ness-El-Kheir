@@ -1,5 +1,5 @@
 /**
- * Shared TypeScript types — Nass el Kheir
+ * Shared TypeScript types — Ness el Kheir
  */
 
 export interface Annonce {

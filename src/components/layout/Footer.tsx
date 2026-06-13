@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <div className="leading-tight">
               <span className="block font-[family-name:var(--font-source-serif)] text-lg font-semibold leading-none">
-                Nass el Kheir
+                Ness el Kheir
               </span>
               <span className="block text-[10px] tracking-widest uppercase text-[#a3b396] font-semibold">
                 association
@@ -85,7 +85,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col sm:flex-row items-center justify-between py-4 gap-2 text-xs text-white/30">
-          <span>© {year} Nass el Kheir — Tous droits réservés</span>
+          <span>© {year} Ness el Kheir — Tous droits réservés</span>
           <span>Association loi 1901</span>
         </div>
       </div>

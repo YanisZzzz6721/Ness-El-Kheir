@@ -63,7 +63,7 @@ export default function AdminSidebar() {
             <Image src="/logo.png" alt="Logo" width={32} height={32} className="w-full h-full object-cover" />
           </div>
           <div className="leading-tight min-w-0">
-            <span className="block font-[family-name:var(--font-source-serif)] text-sm font-semibold text-[#1c1c1c] truncate">Nass el Kheir</span>
+            <span className="block font-[family-name:var(--font-source-serif)] text-sm font-semibold text-[#1c1c1c] truncate">Ness el Kheir</span>
             <span className="block text-[9px] tracking-widest uppercase text-[#839678] font-semibold">admin</span>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function AdminSidebar() {
                 <div className="w-7 h-7 rounded-full overflow-hidden">
                   <Image src="/logo.png" alt="Logo" width={28} height={28} className="w-full h-full object-cover" />
                 </div>
-                <span className="font-semibold text-sm text-[#1c1c1c]">Nass el Kheir</span>
+                <span className="font-semibold text-sm text-[#1c1c1c]">Ness el Kheir</span>
               </div>
               <button onClick={() => setOpen(false)} className="p-1.5 rounded-lg hover:bg-[#f0f3ee]">
                 <X size={18} />

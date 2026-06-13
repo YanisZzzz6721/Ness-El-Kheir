@@ -47,11 +47,11 @@ export default function Header() {
             onClick={closeMenu}
           >
             <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 shadow-sm border border-[#e8e8e8]">
-              <Image src="/logo.png" alt="Logo Nass el Kheir" width={80} height={80} quality={100} className="w-full h-full object-cover" />
+              <Image src="/logo.png" alt="Logo Ness el Kheir" width={80} height={80} quality={100} className="w-full h-full object-cover" />
             </div>
             <div className="leading-tight">
               <span className="block font-[family-name:var(--font-source-serif)] text-lg font-semibold text-[#1c1c1c] leading-none">
-                Nass el Kheir
+                Ness el Kheir
               </span>
               <span className="block text-[10px] tracking-widest uppercase text-[#839678] font-semibold">
                 association

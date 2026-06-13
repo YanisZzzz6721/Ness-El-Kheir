@@ -10,7 +10,7 @@ const SECTIONS: { title: string; emoji: string; fields: Field[] }[] = [
   {
     title: "Page d'accueil — Hero", emoji: "🏠",
     fields: [
-      { id: "hero_titre",       label: "Titre principal",           hint: 'Ex : "Nass el Kheir"' },
+      { id: "hero_titre",       label: "Titre principal",           hint: 'Ex : "Ness el Kheir"' },
       { id: "hero_subtitle",    label: "Sous-titre",                hint: 'Ex : "association"' },
       { id: "hero_description", label: "Description d\'accroche",   hint: "Texte sous le titre", multiline: true },
       { id: "hero_tags",        label: "Tags d\'activités",         hint: "Séparés par des virgules : Collectes,Maraudes,…" },

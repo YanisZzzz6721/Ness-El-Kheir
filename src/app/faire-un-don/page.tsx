@@ -4,7 +4,7 @@ import { Heart, ArrowLeft, ShieldCheck, Users, HandHeart, Truck } from "lucide-r
 
 export const metadata: Metadata = {
   title: "Faire un don",
-  description: "Soutenez Nass el Kheir et aidez-nous à continuer nos actions humanitaires en Île-de-France.",
+  description: "Soutenez Ness el Kheir et aidez-nous à continuer nos actions humanitaires en Île-de-France.",
 };
 
 // 🔧 À REMPLACER dès réception du lien PayPal

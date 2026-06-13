@@ -51,7 +51,7 @@ export default function LoginPage() {
           </div>
           <div className="text-center">
             <p className="font-[family-name:var(--font-source-serif)] text-xl text-[#1c1c1c] font-semibold">
-              Nass el Kheir
+              Ness el Kheir
             </p>
             <p className="text-xs text-[#8a8a8a] tracking-widest uppercase font-semibold mt-0.5">
               Espace administrateur

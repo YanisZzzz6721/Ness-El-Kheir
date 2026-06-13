@@ -1,5 +1,5 @@
 /**
- * Utility helpers — Nass el Kheir
+ * Utility helpers — Ness el Kheir
  */
 
 /** Merge class names (lightweight, no clsx/cn dependency for now) */

@@ -20,7 +20,7 @@ export default function GalleryGrid({ photos }: { photos: GaleriePhoto[] }) {
           >
             <Image
               src={photo.url}
-              alt={photo.alt ?? "Photo Nass el Kheir"}
+              alt={photo.alt ?? "Photo Ness el Kheir"}
               width={600}
               height={500}
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -52,7 +52,7 @@ export default function GalleryGrid({ photos }: { photos: GaleriePhoto[] }) {
           <div className="max-w-3xl max-h-[90vh] relative" onClick={(e) => e.stopPropagation()}>
             <Image
               src={lightbox.url}
-              alt={lightbox.alt ?? "Photo Nass el Kheir"}
+              alt={lightbox.alt ?? "Photo Ness el Kheir"}
               width={900}
               height={700}
               className="max-h-[85vh] w-auto rounded-[10px] shadow-2xl object-contain"

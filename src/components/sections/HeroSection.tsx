@@ -24,7 +24,7 @@ export default function HeroSection({ content }: Props) {
 
           <div>
             <h1 className="text-white font-[family-name:var(--font-source-serif)] font-light leading-[1.05]">
-              {content.hero_titre ?? "Nass el Kheir"}
+              {content.hero_titre ?? "Ness el Kheir"}
             </h1>
             <p className="mt-2 text-white/60 text-sm font-semibold tracking-[0.2em] uppercase">
               {content.hero_subtitle ?? "association"}
@@ -32,7 +32,7 @@ export default function HeroSection({ content }: Props) {
           </div>
 
           <p className="text-white/85 text-base leading-relaxed max-w-md">
-            {content.hero_description ?? "Rejoignez Nass el Kheir, une association féminine engagée dans des actions humanitaires."}
+            {content.hero_description ?? "Rejoignez Ness el Kheir, une association féminine engagée dans des actions humanitaires."}
           </p>
 
           <div className="flex flex-wrap gap-3">

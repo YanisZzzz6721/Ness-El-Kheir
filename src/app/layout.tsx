@@ -22,16 +22,16 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nass el Kheir — Association humanitaire",
-    template: "%s | Nass el Kheir",
+    default: "Ness el Kheir — Association humanitaire",
+    template: "%s | Ness el Kheir",
   },
   description:
-    "Nass el Kheir est une association féminine engagée dans des actions humanitaires : collectes, maraudes, distributions alimentaires et vestimentaires, soutien aux étudiants.",
+    "Ness el Kheir est une association féminine engagée dans des actions humanitaires : collectes, maraudes, distributions alimentaires et vestimentaires, soutien aux étudiants.",
   keywords: ["association", "humanitaire", "bénévoles", "maraudes", "collectes", "Île-de-France"],
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Nass el Kheir",
+    siteName: "Ness el Kheir",
   },
 };
 

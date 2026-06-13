@@ -73,7 +73,7 @@ export default function ContenuManager({ content: initial }: { content: Record<s
   return (
     <div className="flex flex-col gap-6">
       {SECTIONS.map((section) => (
-        <div key={section.title} className="bg-white rounded-[16px] shadow-sm p-6 flex flex-col gap-5">
+        <div key={section.title} className="bg-white rounded-[16px] shadow-sm p-4 sm:p-6 flex flex-col gap-5">
           <h2 className="font-semibold text-[#1c1c1c] text-base flex items-center gap-2">
             <span>{section.emoji}</span> {section.title}
           </h2>
@@ -81,7 +81,7 @@ export default function ContenuManager({ content: initial }: { content: Record<s
             <div key={field.id} className="flex flex-col gap-1.5">
               <label className="text-xs font-semibold text-[#4a4a4a] uppercase tracking-wide">{field.label}</label>
               {field.hint && <p className="text-xs text-[#8a8a8a]">{field.hint}</p>}
-              <div className="flex gap-2 items-start">
+              <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-start">
                 {field.multiline ? (
                   <textarea
                     value={values[field.id] ?? ""}
@@ -100,10 +100,10 @@ export default function ContenuManager({ content: initial }: { content: Record<s
                 <button
                   onClick={() => handleSave(field.id)}
                   disabled={loading === field.id}
-                  className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-2.5 rounded-[10px] text-sm font-semibold transition-all ${saved[field.id] ? "bg-green-100 text-green-600" : "bg-[#f0f3ee] text-[#839678] hover:bg-[#839678] hover:text-white"}`}
+                  className={`flex-shrink-0 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-[10px] text-sm font-semibold transition-all w-full sm:w-auto ${saved[field.id] ? "bg-green-100 text-green-600" : "bg-[#f0f3ee] text-[#839678] hover:bg-[#839678] hover:text-white"}`}
                 >
                   {saved[field.id] ? <Check size={15} /> : <Save size={15} />}
-                  {saved[field.id] ? "Sauvé !" : "Sauv."}
+                  {saved[field.id] ? "Sauvegardé !" : "Sauvegarder"}
                 </button>
               </div>
             </div>

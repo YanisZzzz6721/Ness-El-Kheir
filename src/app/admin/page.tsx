@@ -19,7 +19,7 @@ export default async function AdminDashboard() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 pt-16 md:pt-0">
+    <div className="flex flex-col gap-6 md:gap-8">
       <div>
         <h1 className="font-[family-name:var(--font-source-serif)] text-3xl text-[#1c1c1c] font-light">Bonjour 👋</h1>
         <p className="text-[#8a8a8a] text-sm mt-1">Voici un résumé de votre site.</p>

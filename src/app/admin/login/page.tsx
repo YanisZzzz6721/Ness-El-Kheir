@@ -41,8 +41,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F6F6F6] flex items-center justify-center p-4">
-      <div className="w-full max-w-sm">
+    <div className="min-h-screen bg-[#F6F6F6] flex items-center justify-center px-4 py-8">
+      <div className="w-full max-w-sm mx-auto">
 
         {/* Logo + titre */}
         <div className="flex flex-col items-center gap-4 mb-8">
@@ -60,7 +60,7 @@ export default function LoginPage() {
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col gap-5">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 flex flex-col gap-5">
           <h1 className="text-[#1c1c1c] text-lg font-semibold text-center">Connexion</h1>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4" autoComplete="on">

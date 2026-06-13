@@ -17,7 +17,7 @@ export default function AboutSection({ content }: Props) {
       <div className="container-site flex flex-col gap-12">
         <SectionTitle
           label="À propos"
-          title="Nass el Kheir, c'est quoi ?"
+          title="Ness el Kheir, c'est quoi ?"
           subtitle={content.apropos_texte}
         />
         <div className="max-w-2xl mx-auto text-center">

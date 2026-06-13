@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   description:
     "Ness el Kheir est une association féminine engagée dans des actions humanitaires : collectes, maraudes, distributions alimentaires et vestimentaires, soutien aux étudiants.",
   keywords: ["association", "humanitaire", "bénévoles", "maraudes", "collectes", "Île-de-France"],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",

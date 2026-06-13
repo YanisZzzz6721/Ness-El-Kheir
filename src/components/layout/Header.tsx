@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -45,8 +46,8 @@ export default function Header() {
             className="flex items-center gap-2 group"
             onClick={closeMenu}
           >
-            <div className="w-8 h-8 rounded-full bg-[#839678] flex items-center justify-center flex-shrink-0 group-hover:bg-[#6b7d63] transition-colors">
-              <Heart size={14} className="text-white fill-white" />
+            <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 shadow-sm">
+              <Image src="/logo.png" alt="Logo Nass el Kheir" width={36} height={36} className="w-full h-full object-cover" />
             </div>
             <div className="leading-tight">
               <span className="block font-[family-name:var(--font-source-serif)] text-lg font-semibold text-[#1c1c1c] leading-none">

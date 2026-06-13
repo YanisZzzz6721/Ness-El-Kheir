@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, Instagram, Phone } from "lucide-react";
+import { Send, CheckCircle2, Instagram, MessageCircle } from "lucide-react";
 import { submitContact } from "@/app/actions/contact";
 
 interface Props { content: Record<string, string> }
@@ -48,9 +48,14 @@ export default function ContactSection({ content }: Props) {
                 <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0"><Instagram size={16} /></div>
                 <span className="text-sm font-medium">{content.instagram_handle ?? "@nasselkheir"}</span>
               </a>
-              <a href={`tel:${(content.telephone ?? "0600000000").replace(/\s/g,"")}`} className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0"><Phone size={16} /></div>
-                <span className="text-sm font-medium">{content.telephone ?? "06 00 00 00 00"}</span>
+              <a
+                href={`https://wa.me/${(content.telephone ?? "0600000000").replace(/\s/g,"").replace(/^0/, "33")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
+              >
+                <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0"><MessageCircle size={16} /></div>
+                <span className="text-sm font-medium">Nous contacter sur WhatsApp</span>
               </a>
             </div>
           </div>

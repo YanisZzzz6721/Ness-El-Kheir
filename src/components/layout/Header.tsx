@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Instagram, Phone, Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -29,28 +29,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-
-      {/* ── Top Bar ── */}
-      <div className="bg-[#839678] text-white text-xs font-medium">
-        <div className="container-site flex items-center justify-between py-2">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-white/80 transition-colors"
-          >
-            <Instagram size={13} />
-            <span>@nasselkheir</span>
-          </a>
-          <a
-            href="tel:+33600000000"
-            className="flex items-center gap-1.5 hover:text-white/80 transition-colors"
-          >
-            <Phone size={13} />
-            <span>06 00 00 00 00</span>
-          </a>
-        </div>
-      </div>
 
       {/* ── Main Nav ── */}
       <nav

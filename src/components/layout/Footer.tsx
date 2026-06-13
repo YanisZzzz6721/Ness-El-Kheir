@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Phone, Heart, Mail } from "lucide-react";
+import { Heart, MessageCircle, Mail } from "lucide-react";
 
 const LINKS_NAV = [
   { label: "Accueil",   href: "#accueil"   },
@@ -36,15 +36,6 @@ export default function Footer() {
           <p className="text-sm text-white/60 leading-relaxed max-w-xs">
             Une association féminine engagée dans des actions humanitaires envers les personnes en situation de précarité.
           </p>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-[#a3b396] hover:text-white transition-colors w-fit"
-          >
-            <Instagram size={16} />
-            @nasselkheir
-          </a>
         </div>
 
         {/* Navigation */}
@@ -73,11 +64,13 @@ export default function Footer() {
           </h5>
           <div className="flex flex-col gap-3">
             <a
-              href="tel:+33600000000"
+              href="https://wa.me/33600000000"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
             >
-              <Phone size={14} />
-              06 00 00 00 00
+              <MessageCircle size={14} />
+              WhatsApp
             </a>
             <a
               href="mailto:contact@nasselkheir.fr"

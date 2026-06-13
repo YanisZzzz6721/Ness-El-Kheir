@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Heart, ChevronDown } from "lucide-react";
 
 interface Props { content: Record<string, string> }
@@ -50,13 +49,13 @@ export default function HeroSection({ content }: Props) {
         <div className="hidden lg:flex items-center justify-center">
           <div className="relative w-[380px] h-[380px]">
             <div className="absolute inset-0 rounded-full bg-white/10 border border-white/20" />
-            <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
-              <Image
-                src="/logo.png"
-                alt="Logo Nass el Kheir"
-                fill
-                className="object-cover"
-              />
+            <div className="absolute inset-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+              <div className="flex flex-col items-center gap-3 text-white text-center px-8">
+                <Heart size={48} className="fill-white/30 text-white" strokeWidth={1} />
+                <p className="font-[family-name:var(--font-source-serif)] text-2xl font-light leading-tight">
+                  Ensemble,<br />nous pouvons<br />tout changer
+                </p>
+              </div>
             </div>
             <div className="absolute -top-4 left-8 bg-white rounded-[10px] shadow-lg px-4 py-2.5 text-sm font-semibold text-[#839678]">
               {content.stats_benevoles ?? "+80"} bénévoles 💚

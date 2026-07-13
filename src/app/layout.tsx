@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Source_Serif_4 } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { getSiteContent } from "@/lib/supabase/queries";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -121,11 +122,13 @@ const jsonLd = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const content = await getSiteContent();
+
   return (
     <html lang="fr" className={`${poppins.variable} ${sourceSerif.variable}`}>
       <head>
@@ -137,7 +140,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer content={content} />
       </body>
     </html>
   );

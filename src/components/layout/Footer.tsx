@@ -1,5 +1,7 @@
 import { Heart, MessageCircle, Mail } from "lucide-react";
 
+interface Props { content: Record<string, string> }
+
 const LINKS_NAV = [
   { label: "Accueil",   href: "#accueil"   },
   { label: "À propos",  href: "#a-propos"  },
@@ -9,8 +11,15 @@ const LINKS_NAV = [
   { label: "FAQ",       href: "#faq"       },
 ];
 
-export default function Footer() {
+export default function Footer({ content }: Props) {
   const year = new Date().getFullYear();
+
+  const instagramHandle = content.instagram_handle ?? "@nesselkheir";
+  const telephone       = content.telephone ?? "06 00 00 00 00";
+  const email           = content.email ?? "contact@nesselkheir.fr";
+  const whatsappNumber  = telephone.replace(/\s/g, "").replace(/^0/, "33");
+  const description     = content.footer_description ?? content.apropos_texte
+    ?? "Une association féminine engagée dans des actions humanitaires envers les personnes en situation de précarité.";
 
   return (
     <footer className="bg-[#1c1c1c] text-white">
@@ -25,15 +34,15 @@ export default function Footer() {
             </div>
             <div className="leading-tight">
               <span className="block font-[family-name:var(--font-source-serif)] text-lg font-semibold leading-none">
-                Ness el Kheir
+                {content.hero_titre ?? "Ness el Kheir"}
               </span>
               <span className="block text-[10px] tracking-widest uppercase text-[#a3b396] font-semibold">
-                association
+                {content.hero_subtitle ?? "association"}
               </span>
             </div>
           </div>
           <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-            Une association féminine engagée dans des actions humanitaires envers les personnes en situation de précarité.
+            {description}
           </p>
         </div>
 
@@ -63,7 +72,7 @@ export default function Footer() {
           </h5>
           <div className="flex flex-col gap-3">
             <a
-              href="https://wa.me/33600000000"
+              href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
@@ -72,11 +81,11 @@ export default function Footer() {
               WhatsApp
             </a>
             <a
-              href="mailto:contact@nasselkheir.fr"
+              href={`mailto:${email}`}
               className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
             >
               <Mail size={14} />
-              contact@nasselkheir.fr
+              {email}
             </a>
           </div>
         </div>
@@ -85,7 +94,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col sm:flex-row items-center justify-between py-4 gap-2 text-xs text-white/30">
-          <span>© {year} Ness el Kheir — Tous droits réservés</span>
+          <span>© {year} {content.hero_titre ?? "Ness el Kheir"} — Tous droits réservés</span>
           <span>Association loi 1901</span>
         </div>
       </div>

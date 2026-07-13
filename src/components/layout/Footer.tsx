@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Heart, MessageCircle, Mail, Instagram } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Mail, Instagram } from "lucide-react";
 
 interface Props { content: Record<string, string> }
 
@@ -36,8 +37,8 @@ export default function Footer({ content }: Props) {
           {/* Brand — centré, titre et texte pleine largeur */}
           <div className="flex flex-col items-center gap-5 w-full text-center">
             <div className="flex flex-col items-center gap-3">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#839678] flex items-center justify-center flex-shrink-0">
-                <Heart size={20} className="text-white fill-white" />
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 border border-white/15 shadow-sm">
+                <Image src="/logo.png" alt="Logo Ness el Kheir" width={128} height={128} quality={100} className="w-full h-full object-cover" />
               </div>
               <div className="leading-tight">
                 <span className="block font-[family-name:var(--font-source-serif)] text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">

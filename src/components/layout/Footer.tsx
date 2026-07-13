@@ -31,24 +31,24 @@ export default function Footer({ content }: Props) {
   return (
     <footer className="relative bg-[#1c1c1c] text-white rounded-t-[32px] md:rounded-t-[40px]">
 
-        <div className="container-site pt-24 pb-10 md:pt-32 md:pb-12 flex flex-col gap-12 md:gap-14">
+        <div className="container-site pt-40 pb-10 md:pt-52 md:pb-12 flex flex-col gap-12 md:gap-14">
 
           {/* Brand — seul en haut, bien espacé du bord */}
-          <div className="flex flex-col gap-4 max-w-sm">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#839678] flex items-center justify-center flex-shrink-0">
-                <Heart size={16} className="text-white fill-white" />
+          <div className="flex flex-col gap-4 w-full">
+            <div className="flex items-center gap-4 w-full">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#839678] flex items-center justify-center flex-shrink-0">
+                <Heart size={20} className="text-white fill-white" />
               </div>
-              <div className="leading-tight">
-                <span className="block font-[family-name:var(--font-source-serif)] text-xl font-semibold leading-none">
+              <div className="leading-tight flex-1 min-w-0">
+                <span className="block font-[family-name:var(--font-source-serif)] text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">
                   {content.hero_titre ?? "Ness el Kheir"}
                 </span>
-                <span className="block text-[10px] tracking-widest uppercase text-[#a3b396] font-semibold mt-1.5">
+                <span className="block text-[11px] tracking-widest uppercase text-[#a3b396] font-semibold mt-2">
                   {content.hero_subtitle ?? "association"}
                 </span>
               </div>
             </div>
-            <p className="text-sm text-white/55 leading-relaxed">
+            <p className="text-sm text-white/55 leading-relaxed max-w-xl">
               {description}
             </p>
           </div>

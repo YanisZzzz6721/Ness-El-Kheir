@@ -33,13 +33,13 @@ export default function Footer({ content }: Props) {
 
         <div className="container-site pt-16 pb-10 md:pt-20 md:pb-12 flex flex-col gap-12 md:gap-14">
 
-          {/* Brand — seul en haut, bien espacé du bord */}
-          <div className="flex flex-col gap-4 w-full">
-            <div className="flex items-center gap-4 w-full">
+          {/* Brand — centré, titre et texte pleine largeur */}
+          <div className="flex flex-col items-center gap-5 w-full text-center">
+            <div className="flex flex-col items-center gap-3">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#839678] flex items-center justify-center flex-shrink-0">
                 <Heart size={20} className="text-white fill-white" />
               </div>
-              <div className="leading-tight flex-1 min-w-0">
+              <div className="leading-tight">
                 <span className="block font-[family-name:var(--font-source-serif)] text-3xl sm:text-4xl md:text-5xl font-semibold leading-none">
                   {content.hero_titre ?? "Ness el Kheir"}
                 </span>
@@ -48,7 +48,7 @@ export default function Footer({ content }: Props) {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-white/55 leading-relaxed max-w-xl">
+            <p className="text-sm text-white/55 leading-relaxed w-full max-w-3xl">
               {description}
             </p>
           </div>

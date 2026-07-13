@@ -29,10 +29,9 @@ export default function Footer({ content }: Props) {
     ?? "Une association engagée dans des actions solidaires envers les personnes en situation de précarité.";
 
   return (
-    <div className="bg-[#F6F6F6] pt-10 md:pt-16">
-      <footer className="relative bg-[#1c1c1c] text-white rounded-t-[32px] md:rounded-t-[40px]">
+    <footer className="relative bg-[#1c1c1c] text-white rounded-t-[32px] md:rounded-t-[40px]">
 
-        <div className="container-site pt-14 pb-10 md:pt-20 md:pb-12 flex flex-col gap-12 md:gap-14">
+        <div className="container-site pt-24 pb-10 md:pt-32 md:pb-12 flex flex-col gap-12 md:gap-14">
 
           {/* Brand — seul en haut, bien espacé du bord */}
           <div className="flex flex-col gap-4 max-w-sm">
@@ -128,7 +127,6 @@ export default function Footer({ content }: Props) {
             <span>© {year} {content.hero_titre ?? "Ness el Kheir"} — Association loi 1901</span>
           </div>
         </div>
-      </footer>
-    </div>
+    </footer>
   );
 }

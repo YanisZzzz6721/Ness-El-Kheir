@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   description:
     "Ness el Kheir est une association féminine humanitaire à Strasbourg (67). Aide aux personnes âgées, soutien aux étudiants, collectes alimentaires, distribution de vêtements, aide aux familles en difficulté et actions solidaires en Alsace.",
   keywords: [
+    "Ness el Kheir Strasbourg",
     "Ness el Kheir",
     "association humanitaire Strasbourg",
     "association féminine Strasbourg",
@@ -97,6 +98,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NGO",
   name: "Ness el Kheir",
+  alternateName: "Ness el Kheir Strasbourg",
   url: BASE_URL,
   logo: `${BASE_URL}/logo.png`,
   description:

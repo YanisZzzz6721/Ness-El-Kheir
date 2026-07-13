@@ -91,6 +91,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
+  verification: {
+    google: "ceg8m9S1ec6cwMqHDH4_cCu9CfCoOW-k8IfMs-YZZbY",
+  },
 };
 
 // Données structurées JSON-LD pour Google

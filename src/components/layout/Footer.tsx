@@ -31,7 +31,7 @@ export default function Footer({ content }: Props) {
   return (
     <footer className="relative bg-[#1c1c1c] text-white rounded-t-[32px] md:rounded-t-[40px]">
 
-        <div className="container-site pt-40 pb-10 md:pt-52 md:pb-12 flex flex-col gap-12 md:gap-14">
+        <div className="container-site pt-16 pb-10 md:pt-20 md:pb-12 flex flex-col gap-12 md:gap-14">
 
           {/* Brand — seul en haut, bien espacé du bord */}
           <div className="flex flex-col gap-4 w-full">
